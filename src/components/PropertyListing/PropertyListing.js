@@ -16,12 +16,12 @@ const DUMMY_PROPERTY = {
     mainImage: 'https://media.rightmove.co.uk/dir/crop/10:9-16:9/38k/37655/53588679/37655_CAM170036_IMG_01_0000_max_476x317.jpg'
 };
 
-const PropertyListing = () => {
+const PropertyListing = ({ properties }) => {
     return (
         <div className="PropertyListing">
             {
-                Array(5).fill(DUMMY_PROPERTY)
-                    .map((property, index) => <PropertyCard key={index} {...property}/>)
+                properties
+                    .map((property) => <PropertyCard key={property.id} {...property}/>)
             }
         </div>
     )
