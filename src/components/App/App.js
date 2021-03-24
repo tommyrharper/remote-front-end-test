@@ -5,7 +5,7 @@ import SortAndFilter from '../SortAndFilter';
 import PropertyListing from '../PropertyListing';
 import useFetch from '../hooks/useFetch';
 
-const API_ENDPOINT = 'http://localhost:3000/api/properties';
+const API_ENDPOINT = '/api/properties';
 
 const App = () => {
     const [response, loading, hasError] = useFetch(API_ENDPOINT);
